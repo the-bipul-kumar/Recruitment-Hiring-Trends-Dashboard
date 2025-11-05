@@ -76,3 +76,6 @@ Cleans and consolidates all job-related data into one unified schema.
 Enables visual insights into hiring trends, job types, and skill demand.
 Supports strategic decision-making through automated, data-driven analytics.
 
+**Dashboard Preview**
+![Dashboard Snapshot](https://raw.githubusercontent.com/the-bipul-kumar/Recruitment-Hiring-Trends-Dashboard/main/snapshot1.png)
+![Dasboard Snapshot](https://github.com/the-bipul-kumar/Recruitment-Hiring-Trends-Dashboard/blob/main/snapshot2.png)
