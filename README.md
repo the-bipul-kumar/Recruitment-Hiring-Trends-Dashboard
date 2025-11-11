@@ -9,59 +9,72 @@ The goal: to deliver a performance-optimized Power BI dashboard that enables the
 
 The solution was built using the following tools and technologies:
 
--Microsoft Power BI Desktop – Data modeling, visualization, and dashboard creation.
--Power Query (M Language) – Data extraction, transformation, and cleaning from multiple sources.
--DAX (Data Analysis Expressions) – For calculated columns, measures, and time intelligence.
--SQL / Excel / CSV – Source data files from multiple systems (structured + unstructured).
--Database Design – Created normalized relational structure before consolidation.
--Power BI Optimization Techniques – Query folding, star schema modeling, incremental refresh, and data reduction.
+* __Microsoft Power BI Desktop__ – Data modeling, visualization, and dashboard creation.
+* __Power Query (M Language)__ – Data extraction, transformation, and cleaning from multiple sources.
+* __DAX (Data Analysis Expressions)__ – For calculated columns, measures, and time intelligence.
+* __SQL / CSV__ – Source data files from multiple systems (structured + unstructured).
+* __Database Design__ – Created normalized relational structure before consolidation.
+* __Power BI Optimization Techniques__ – Query folding, star schema modeling, incremental refresh, and data reduction.
 
 **Data Flow: SQL Server → Power BI**
-📂 Raw Data Sources (CSV / Excel / APIs / Web Scraping)
-        │
-        ▼
-🧹 Data Cleaning & Integration (SQL Server / Python ETL)
-        │
-        ▼
-🗄️ SQL Server Database (Normalized + Consolidated Tables)
-        │
-        ▼
-🔗 Power BI Data Connection (Direct Query / Import)
-        │
-        ▼
-🧠 Data Modelling in Power BI (Relationships, DAX, Measures)
-        │
-        ▼
-📊 Power BI Reports & Dashboards (Recruitment & Hiring Trends)
+
+* Raw Data Sources (sql Sever)
+  
+             ↓
+* Data Cleaning & Integration (SQL Server)
+  
+             ↓
+* SQL Server Database (Normalized + Consolidated Tables)
+  
+             ↓
+* Power BI Data Connection (Direct Query / Import)
+
+             ↓
+* Data Modelling in Power BI (Relationships, DAX, Measures)
+ 
+             ↓
+* Power BI Reports & Dashboards (Recruitment & Hiring Trends)
 
 
 **Data Structure Challenges:**
 
--Mix of normalised and centralised data formats.
--Missing or inconsistent values in job details.
--Text-heavy unstructured columns (e.g., long job descriptions).
--Poorly defined relationships between multiple tables.
--Solution Approach:
--Standardized all datasets into consistent field names and formats.
--Designed relational tables and linked them via primary and foreign keys.
+* Mix of normalised and centralised data formats.
+* Missing or inconsistent values in job details.
+* Text-heavy unstructured columns (e.g., long job descriptions).
+* Poorly defined relationships between multiple tables.
+* Solution Approach:
+* Standardized all datasets into consistent field names and formats.
+* Designed relational tables and linked them via primary and foreign keys.
 
 Created a final consolidated schema in Power BI following the model below:
 
 Column Name	Description
-**Job_id**	Unique identifier for each job posting.
-**Job_title**	Name/title of the job position.
-**Job_field**	Domain of the job (e.g., Data Science, Data Engineering).
-**Company_name**	Organization offering the job.
-**Job_location**	City/state or remote status of the role.
-**Job_posting_date**	Original date of the job posting.
-**Job_level**	Experience level (Entry / Mid / Senior).
-**Job_type**	On-site, Hybrid, or Remote.
-**Job_employment_type**	Permanent, Contractual, or Internship.
-**Job_skills**	Required or preferred skills for the role.
-**Summary**	Brief job description or overview.
+
+**Job_id** - Unique identifier for each job posting.
+
+**Job_title**- Name/title of the job position.
+
+**Job_field**- Domain of the job (e.g., Data Science, Data Engineering).
+
+**Company_name**- Organization offering the job.
+
+**Job_location**- City/state or remote status of the role.
+
+**Job_posting_date**- Original date of the job posting.
+
+**Job_level**- Experience level (Entry / Mid / Senior).
+
+**Job_type**- On-site, Hybrid, or Remote.
+
+**Job_employment_type**- Permanent, Contractual, or Internship.
+
+**Job_skills**- Required or preferred skills for the role.
+
+**Summary**- Brief job description or overview.
 
 
 **Features / Highlights**
+
   **Business Problem**
 
 The recruitment firm struggled with messy, fragmented, and large datasets.
